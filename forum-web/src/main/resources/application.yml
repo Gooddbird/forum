@@ -1,0 +1,8 @@
+dubbo:
+  application:
+    name: forum-post-web
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: nacos://127.0.0.1:8848

@@ -18,6 +18,8 @@
         <module>forum-user</module>
         <module>forum-post</module>
         <module>forum-post-interface</module>
+        <module>forum-web</module>
+        <module>forum-user-interface</module>
     </modules>
     <packaging>pom</packaging>
     <properties>
@@ -50,6 +52,11 @@
                 <version>${dubbo.starterVersion}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.10</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
