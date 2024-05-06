@@ -16,10 +16,10 @@
     <description>forum</description>
     <modules>
         <module>forum-user</module>
+        <module>forum-user-interface</module>
         <module>forum-post</module>
         <module>forum-post-interface</module>
         <module>forum-web</module>
-        <module>forum-user-interface</module>
     </modules>
     <packaging>pom</packaging>
     <properties>

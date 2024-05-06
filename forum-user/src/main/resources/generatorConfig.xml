@@ -11,15 +11,15 @@
                 connectionURL="jdbc:mysql://localhost:3306/business?useUnicode=true&amp;characterEncoding=UTF-8"
                 userId="root" password="root1234" />
         <!--entity实体类-->
-        <javaModelGenerator targetPackage="com.parry.test.basic"
+        <javaModelGenerator targetPackage="com.ikerli.forum.user.domain.entity"
                 targetProject="D:/temp/java" />
         <!-- mybatis映射xml文件 -->
-        <sqlMapGenerator targetPackage="com.parry.test.config"
-                targetProject="D:/temp/java" />
+        <sqlMapGenerator targetPackage="com.ikerli.forum.user.infra.mapper"
+                targetProject="src/main/resources/mybatis" />
         <!--mapper接口 -->
-        <javaClientGenerator targetPackage="com.parry.test.mapper."
-                targetProject="D:/temp/java" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="com.ikerli.forum.user.infra.mapper"
+                targetProject="src/main/java/com/ikerli/forum/user/infra/mapper" type="XMLMAPPER" />
         <!--数据表-->
-        <table schema="calendar" tableName="t_holiday" />
+        <table schema="business " tableName="t_user" />
     </context>
 </generatorConfiguration>
