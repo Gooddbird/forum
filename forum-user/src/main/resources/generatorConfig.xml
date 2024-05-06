@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+
+<generatorConfiguration>
+    <!--指定了驱动jar包的位置,我用的是mysql -->
+    <classPathEntry
+            location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.36/mysql-connector-java-5.1.36.jar" />
+    <context id="calendar" targetRuntime="MyBatis3">
+        <!-- 数据库连接信息 -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                connectionURL="jdbc:mysql://localhost:3306/business?useUnicode=true&amp;characterEncoding=UTF-8"
+                userId="root" password="root1234" />
+        <!--entity实体类-->
+        <javaModelGenerator targetPackage="com.parry.test.basic"
+                targetProject="D:/temp/java" />
+        <!-- mybatis映射xml文件 -->
+        <sqlMapGenerator targetPackage="com.parry.test.config"
+                targetProject="D:/temp/java" />
+        <!--mapper接口 -->
+        <javaClientGenerator targetPackage="com.parry.test.mapper."
+                targetProject="D:/temp/java" type="XMLMAPPER" />
+        <!--数据表-->
+        <table schema="calendar" tableName="t_holiday" />
+    </context>
+</generatorConfiguration>

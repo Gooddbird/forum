@@ -35,7 +35,7 @@ id passwd
 
 
 ### 2.2 数据库设计
-#### 2.2.1 用戶资料表 UserInfo
+#### 2.2.1 用戶资料表 t_user
 | 字段          | 类型           | 含义                          |
 |-------------|--------------|-----------------------------|
 | id          | varchar(20)  | 用户ID，唯一标识                   |
@@ -46,6 +46,19 @@ id passwd
 | createdTime | datetime     | 创建时间，yyyy-mm-dd HH:MM:ss 格式 |
 | updatedTime | datetime     | 最后更新时间                      |
 
+#### 2.2.2 建表语句
+```
+CREATE TABLE business.t_user (
+    id varchar(20) NOT NULL,
+	name varchar(128) NOT NULL,
+	sex smallint(8),
+	gender smallint(8),
+    passwd varchar(128) NOT NULL,
+    createTime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	updateTime DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY (id)
+);
+```
 
 
 ## 2.2 接口清单：
