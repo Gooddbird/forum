@@ -1,6 +1,6 @@
 package com.ikerli.forum.post.provider;
 
-import com.ikerli.forum.PostService;
+import com.ikerli.forum.post.PostService;
 import org.apache.dubbo.config.annotation.DubboService;
 
 /**

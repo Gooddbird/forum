@@ -16,7 +16,6 @@
     <description>forum</description>
     <modules>
         <module>forum-user</module>
-        <module>forum-user-interface</module>
         <module>forum-post</module>
         <module>forum-post-interface</module>
         <module>forum-web</module>
@@ -58,10 +57,20 @@
                 <artifactId>lombok</artifactId>
                 <version>1.18.20</version>
             </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.mybatis.spring.boot</groupId>-->
+<!--                <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--                <version>2.1.4</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>mysql</groupId>-->
+<!--                <artifactId>mysql-connector-java</artifactId>-->
+<!--                <version>8.0.30</version> &lt;!&ndash; 请使用适合你的 MySQL 服务器版本的驱动版本 &ndash;&gt;-->
+<!--            </dependency>-->
             <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.4</version>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>1.9.4</version> <!-- 请使用最新的版本号 -->
             </dependency>
         </dependencies>
     </dependencyManagement>

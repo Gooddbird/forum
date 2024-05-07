@@ -4,21 +4,21 @@
 <generatorConfiguration>
     <!--指定了驱动jar包的位置,我用的是mysql -->
     <classPathEntry
-            location="C:\Users\Administrator\.m2\repository\mysql\mysql-connector-java\5.1.36/mysql-connector-java-5.1.36.jar" />
+            location="C:\Users\ikerli\.m2\repository\mysql\mysql-connector-java\8.0.30/mysql-connector-java-8.0.30.jar" />
     <context id="calendar" targetRuntime="MyBatis3">
         <!-- 数据库连接信息 -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                 connectionURL="jdbc:mysql://localhost:3306/business?useUnicode=true&amp;characterEncoding=UTF-8"
                 userId="root" password="root1234" />
         <!--entity实体类-->
-        <javaModelGenerator targetPackage="com.ikerli.forum.user.domain.entity"
-                targetProject="D:/temp/java" />
+        <javaModelGenerator targetPackage="entity"
+                targetProject="src/main/java/com/ikerli/forum/user/domain/" />
         <!-- mybatis映射xml文件 -->
         <sqlMapGenerator targetPackage="com.ikerli.forum.user.infra.mapper"
                 targetProject="src/main/resources/mybatis" />
         <!--mapper接口 -->
-        <javaClientGenerator targetPackage="com.ikerli.forum.user.infra.mapper"
-                targetProject="src/main/java/com/ikerli/forum/user/infra/mapper" type="XMLMAPPER" />
+        <javaClientGenerator targetPackage="mapper"
+                targetProject="src/main/java/com/ikerli/forum/user/infra/" type="XMLMAPPER" />
         <!--数据表-->
         <table schema="business " tableName="t_user" />
     </context>

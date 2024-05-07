@@ -1,10 +1,13 @@
 package com.ikerli.forum.user.provider;
 
-import com.ikerli.forum.UserService;
-import com.ikerli.forum.dto.AuthenticateRequest;
-import com.ikerli.forum.dto.AuthenticateResponse;
-import com.ikerli.forum.dto.RegisterRequest;
-import com.ikerli.forum.dto.RegisterResponse;
+import com.ikerli.forum.user.UserService;
+import com.ikerli.forum.user.domain.handler.UserRegisterHandler;
+import com.ikerli.forum.user.dto.AuthenticateRequest;
+import com.ikerli.forum.user.dto.AuthenticateResponse;
+import com.ikerli.forum.user.dto.RegisterRequest;
+import com.ikerli.forum.user.dto.RegisterResponse;
+import javax.annotation.Resource;
+import org.springframework.stereotype.Service;
 
 /**
  * @className: UserServiceProvider
@@ -12,11 +15,15 @@ import com.ikerli.forum.dto.RegisterResponse;
  * @description: TODO
  * @createTime: 2024/5/6 16:34
  */
+@Service
 public class UserServiceProvider implements UserService {
+
+    @Resource
+    private UserRegisterHandler userRegisterHandler;
 
     @Override
     public RegisterResponse register(RegisterRequest request) {
-        return null;
+        return userRegisterHandler.register(request);
     }
 
     @Override

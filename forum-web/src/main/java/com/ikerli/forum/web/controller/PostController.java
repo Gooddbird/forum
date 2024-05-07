@@ -1,7 +1,6 @@
 package com.ikerli.forum.web.controller;
 
-import com.ikerli.forum.PostService;
-import javax.annotation.Resource;
+import com.ikerli.forum.post.PostService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,11 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/post")
 public class PostController {
 
-    @DubboReference
-    private PostService postService;
-
-    @RequestMapping("/publish")
-    public String publish() {
-        return postService.publishPost("this is a test post");
-    }
+//    @DubboReference
+//    private PostService postService;
+//
+//    @RequestMapping("/publish")
+//    public String publish() {
+//        return postService.publishPost("this is a test post");
+//    }
 }

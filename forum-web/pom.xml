@@ -15,7 +15,9 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <interfaceVersion>0.0.1-SNAPSHOT</interfaceVersion>
+        <postInterfaceVersion>0.0.1-SNAPSHOT</postInterfaceVersion>
+        <userInterfaceVersion>0.0.1-SNAPSHOT</userInterfaceVersion>
+
     </properties>
 
     <dependencies>
@@ -26,7 +28,12 @@
         <dependency>
             <groupId>com.ikerli.forum</groupId>
             <artifactId>forum-post-interface</artifactId>
-            <version>${interfaceVersion}</version>
+            <version>${postInterfaceVersion}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.ikerli.forum</groupId>
+            <artifactId>forum-user-interface</artifactId>
+            <version>${userInterfaceVersion}</version>
         </dependency>
         <dependency>
             <groupId>org.apache.dubbo</groupId>
@@ -35,6 +42,10 @@
         <dependency>
             <groupId>org.apache.dubbo</groupId>
             <artifactId>dubbo-registry-nacos</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
         </dependency>
     </dependencies>
 </project>
